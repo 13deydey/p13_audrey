@@ -234,10 +234,9 @@ html{
     justify-content: initial;
     align-items: center;
     gap:15px;
-    flex-direction: column;
   }
   .other_projet_item{
-    width: 100%;
+    width: 50%;
     img{
         width: 100%;
         height: 100%;
@@ -870,7 +869,7 @@ body.no-scroll {
                 display: none;
             }
         }
-        .other_photos_section {
+        .other_projets_section {
             margin-top: 0px;
             margin-bottom: 20px;
             flex-direction: column;
@@ -879,17 +878,17 @@ body.no-scroll {
                 text-align: center;
                 margin:0px;
             }
-            .other_photos_container {
+            .other_projets_container {
                 flex-direction: column;
                 gap: 20px;
-                .other_photo_item {
+                .other_projet_item {
                     width: 100%;
                     img {
                         width: 100%;
                         height: 278px;
                     }
                 }
-            }
+            }        
         }
     }
         /* Menu burger */
@@ -948,7 +947,7 @@ body.no-scroll {
         left: 0;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: #4b4141; 
+        background-color: #292929e3; 
         z-index: 1500; /* Entre le header et le bouton */
         
         /* On centre le contenu */
@@ -973,7 +972,7 @@ body.no-scroll {
     }
     .nav-menu-container a {
         font-size: 32px; /* Un peu plus petit pour que ça tienne sur mobile */
-        color: white !important;
+        color: #ffffc3 !important;
     }
     .privacy-policy .page-template,   .main_content_index , .article_page_defaut{
         height: fit-content;
