@@ -49,3 +49,15 @@ function mon_theme_setup() {
     ) );
 }
 add_action( 'after_setup_theme', 'mon_theme_setup' );
+
+function mon_theme_enqueue_scripts() {
+    wp_enqueue_script('mon-theme-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
+
+    // Cette fonction rend l'URL Ajax accessible dans le JS sous l'objet 'monThemeAjax'
+    wp_localize_script('mon-theme-script', 'monThemeAjax', array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'rest_url' => esc_url_raw( rest_url() ),
+        'nonce'   => wp_create_nonce('mon_theme_contact_nonce') // Optionnel: pour plus de sécurité
+    ));
+}
+add_action('wp_enqueue_scripts', 'mon_theme_enqueue_scripts');
