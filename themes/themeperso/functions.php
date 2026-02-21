@@ -61,3 +61,58 @@ function mon_theme_enqueue_scripts() {
     ));
 }
 add_action('wp_enqueue_scripts', 'mon_theme_enqueue_scripts');
+
+//CPT PHOTO 
+// Expose ACF fields in REST API => permet d'utiliser les champs ACF avec javascript via l'API REST
+function expose_acf_fields_in_rest() {
+    register_rest_field('projet', 'acf', array(
+        'get_callback' => function($post) {
+            return get_fields($post['id']);
+        },
+        'schema' => null,
+    ));
+}
+add_action('rest_api_init', 'expose_acf_fields_in_rest');
+
+
+// Expose featured image URL in REST API
+function register_rest_images(){
+    register_rest_field( array('projet'), // Nom de ton CPT
+        'featured_image_url', // Nom du champ en JS
+        array(
+            'get_callback'    => function($object, $field_name, $request) {
+                if ($object['featured_media']) {
+                    $img = wp_get_attachment_image_src($object['featured_media'], 'full');
+                    return $img[0];
+                }
+                return false;
+            },
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+add_action('rest_api_init', 'register_rest_images' );
+
+function register_rest_competence() {    
+    register_rest_field('projet', 'competence_name', array(
+        'get_callback' => function($post_array) {
+            $terms = get_the_terms($post_array['id'], 'competence'); 
+            return !empty($terms) ? $terms[0]->name : '';
+        },
+        'schema' => null,
+    ));
+};
+add_action('rest_api_init', 'register_rest_competence');
+
+function register_rest_annee() {    
+    register_rest_field('projet', 'annee_name', array(
+        'get_callback' => function($post_array) {
+            $terms = get_the_terms($post_array['id'], 'annee'); 
+            return !empty($terms) ? $terms[0]->name : '';
+        },
+        'schema' => null,
+    ));
+};
+add_action('rest_api_init', 'register_rest_annee');
+

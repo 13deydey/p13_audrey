@@ -1,0 +1,59 @@
+[21-Feb-2026 11:39:26 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Error as array in /Users/audreypicarel/Local Sites/audrey/app/public/wp-content/themes/themeperso/functions.php:123
+Stack trace:
+#0 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(439): {closure}(Array, 'langage', Object(WP_REST_Request), 'projet')
+#1 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(2109): WP_REST_Controller->add_additional_fields_to_object(Array, Object(WP_REST_Request))
+#2 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(476): WP_REST_Posts_Controller->prepare_item_for_response(Object(WP_Post), Object(WP_REST_Request))
+#3 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Posts_Controller->get_items(Object(WP_REST_Request))
+#4 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/projet', Array, NULL)
+#5 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#6 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api.php(467): WP_REST_Server->serve_request('/wp/v2/projet')
+#7 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#8 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#11 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp.php(821): WP->parse_request('')
+#12 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/functions.php(1343): WP->main('')
+#13 /Users/audreypicarel/Local Sites/audrey/app/public/wp-blog-header.php(16): wp()
+#14 /Users/audreypicarel/Local Sites/audrey/app/public/index.php(17): require('/Users/audreypi...')
+#15 {main}
+  thrown in /Users/audreypicarel/Local Sites/audrey/app/public/wp-content/themes/themeperso/functions.php on line 123
+[21-Feb-2026 11:41:13 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Error as array in /Users/audreypicarel/Local Sites/audrey/app/public/wp-content/themes/themeperso/functions.php:123
+Stack trace:
+#0 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(439): {closure}(Array, 'langage', Object(WP_REST_Request), 'projet')
+#1 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(2109): WP_REST_Controller->add_additional_fields_to_object(Array, Object(WP_REST_Request))
+#2 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(476): WP_REST_Posts_Controller->prepare_item_for_response(Object(WP_Post), Object(WP_REST_Request))
+#3 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Posts_Controller->get_items(Object(WP_REST_Request))
+#4 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/projet', Array, NULL)
+#5 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#6 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api.php(467): WP_REST_Server->serve_request('/wp/v2/projet')
+#7 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#8 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#11 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp.php(821): WP->parse_request('')
+#12 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/functions.php(1343): WP->main('')
+#13 /Users/audreypicarel/Local Sites/audrey/app/public/wp-blog-header.php(16): wp()
+#14 /Users/audreypicarel/Local Sites/audrey/app/public/index.php(17): require('/Users/audreypi...')
+#15 {main}
+  thrown in /Users/audreypicarel/Local Sites/audrey/app/public/wp-content/themes/themeperso/functions.php on line 123
+[21-Feb-2026 11:41:26 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Error as array in /Users/audreypicarel/Local Sites/audrey/app/public/wp-content/themes/themeperso/functions.php:123
+Stack trace:
+#0 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(439): {closure}(Array, 'langage', Object(WP_REST_Request), 'projet')
+#1 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(2109): WP_REST_Controller->add_additional_fields_to_object(Array, Object(WP_REST_Request))
+#2 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(476): WP_REST_Posts_Controller->prepare_item_for_response(Object(WP_Post), Object(WP_REST_Request))
+#3 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(1292): WP_REST_Posts_Controller->get_items(Object(WP_REST_Request))
+#4 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/projet', Array, NULL)
+#5 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#6 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/rest-api.php(467): WP_REST_Server->serve_request('/wp/v2/projet')
+#7 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#8 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#11 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/class-wp.php(821): WP->parse_request('')
+#12 /Users/audreypicarel/Local Sites/audrey/app/public/wp-includes/functions.php(1343): WP->main('')
+#13 /Users/audreypicarel/Local Sites/audrey/app/public/wp-blog-header.php(16): wp()
+#14 /Users/audreypicarel/Local Sites/audrey/app/public/index.php(17): require('/Users/audreypi...')
+#15 {main}
+  thrown in /Users/audreypicarel/Local Sites/audrey/app/public/wp-content/themes/themeperso/functions.php on line 123
+[21-Feb-2026 11:42:24 UTC] Automatic updates starting...
+[21-Feb-2026 11:42:24 UTC] Automatic updates complete.
